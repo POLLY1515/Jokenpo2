@@ -46,6 +46,10 @@ public class jogoService {
 				.resultadoFinal("EM_ANDAMENTO")
 				.build();
 	}
+	
+	//Metodo jogarRodada
+	//Objetivo:Esse método processa uma rodada do jogo a partir da escolha feita
+	//pelo jogador
 
 	public JogoResponse jogarRodada(Opcoes escolhaJogador) {
 	if (rodadaAtual >= numRodadas) {
@@ -63,11 +67,20 @@ public class jogoService {
 	resultadoFinal = determinarResultadoFinal();
 	}
 	return JogoResponse.builder()
-	// ...todos os campos
-	.build();
+			.mensagem("Jogada realizada com sucesso")
+			.escolhaJogador(escolhaJogador)
+			.escolhaMaquina(escolhaMaquina)
+			.pontuacaoJogador(pontuacaoJogador)
+			.pontuacaoMaquina(pontuacaoMaquina)
+			.resultadoRodada(resultadoRodada)
+			.resultadoFinal(resultadoFinal)
+			.rodadaAtual(rodadaAtual)
+			.totalRodadas(numRodadas)
+			.build();
 	}
 	
 	//Metodo gerarJogadaMaquina
+	//Objetivo:Gerar uma jogada aleatória para a maquina
 	private Opcoes gerarJogadaMaquina() {
 		int escolha = random.nextInt(Opcoes.values().length);
 		return Opcoes.values()[escolha];
