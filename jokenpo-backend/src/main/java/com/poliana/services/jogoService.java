@@ -60,6 +60,7 @@ public class jogoService {
 	.build();
 	}
 	rodadaAtual++;
+	
 	Opcoes escolhaMaquina = gerarJogadaMaquina();
 	String resultadoRodada = determinarVencedorRodada(escolhaJogador, escolhaMaquina);
 	String resultadoFinal = "EM_ANDAMENTO";
@@ -104,7 +105,6 @@ public class jogoService {
 	}
 	
 	//Metodo determinarResultadoFinal
-
 	private String determinarResultadoFinal() {
 		if(pontuacaoJogador > pontuacaoMaquina) {
 			return "JOGADOR_VENCEU";
