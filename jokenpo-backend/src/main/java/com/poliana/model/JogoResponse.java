@@ -11,6 +11,7 @@ public class JogoResponse {
 	//jogoResponse:Define o que o backend enviara de volta ao frontend apos cada jogada,contendo todas as informacoes atualizadas do jogo
 	//Response, o que o sistema responde
 	private String mensagem;
+	private String nomeJogador;
 	private Opcoes escolhaJogador;
 	private Opcoes escolhaMaquina;
 	private int pontuacaoJogador;
