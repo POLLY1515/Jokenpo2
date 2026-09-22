@@ -14,7 +14,7 @@ import com.poliana.model.JogoResponse;
 import com.poliana.services.jogoService;
 @RestController
 @RequestMapping("/api/jokenpo")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://polly1515.github.io", allowCredentials = "true")
 public class JogoController {
 
     @Autowired
